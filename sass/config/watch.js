@@ -1,14 +1,15 @@
-{
+'use strict';
+module.exports = {
   "scripts": {
     "files": [
       "**/*.js",
-      "../**/*.scss"
+      "**/*.scss"
     ],
     "tasks": [
       "build"
     ],
     "options": {
-      "spawn": true
+      "spawn": false
     }
   }
 }
