@@ -25,3 +25,6 @@ node_modules/
 ### VisualStudioCode ###
 .vscode/*
 .history
+
+### Build scss to css and css.min####
+myproject/build/*
