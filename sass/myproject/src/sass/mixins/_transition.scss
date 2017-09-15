@@ -5,3 +5,7 @@
   -o-transition: $time $type;
   transition: $time $type;
 }
+
+@mixin width($number) {
+  width: $number;
+}
