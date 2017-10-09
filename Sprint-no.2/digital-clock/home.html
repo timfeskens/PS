@@ -21,7 +21,7 @@
     <h2 id="timer">-- : --</h2>
     <script type="text/javascript">
         var minutes = 1;
-        var seconds = 60;
+        var seconds = 10;
 
         function addZeroToSeconds () {
             setInterval (function(){
@@ -40,10 +40,12 @@
         function countDown() {
             setInterval (function(){
                 document.getElementById("timer").innerHTML = minutes + " : " + seconds;
-                if (seconds >= 0) {
-                    seconds--;  
+                if (seconds === 0 && minutes === 0) {
                 }
-
+                else {
+                  seconds--;
+                }
+                
                 if (seconds < 0 && minutes > 0) {
                     seconds = 59;
                     minutes--;
