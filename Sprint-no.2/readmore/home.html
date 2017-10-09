@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Read More!</title>
+    <style>
+        #read-text {
+            text-align: center;
+            font-weight: normal;
+        }
+
+        #read-more-button {
+            height: 80px;
+            font-size: 2em;
+            width: auto;
+            -webkit-appearance: none;
+            background-color:#FFF;
+            color:#000000;
+            border: solid #000000 1px;
+        }
+        #read-more-button:focus {
+            outline:0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="read-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut fringilla est. Duis ipsum odio, ultricies vel massa nec, rhoncus tempor turpis. Vestibulum mi ex, semper sed tempor nec, tincidunt vel metus. Phasellus nisl ante, lobortis vitae tempus sollicitudin, ullamcorper non metus. Fusce rutrum arcu et magna blandit molestie. Cras feugiat mi non nisi imperdiet, in bibendum lorem molestie. Curabitur non libero commodo, fringilla arcu vitae, luctus quam. Donec non leo mauris. Pellentesque convallis sem ut augue scelerisque cursus. Sed eu euismod ex, id dictum leo. Donec blandit volutpat orci, laoreet vulputate diam semper id.
+            <br>
+            Pellentesque commodo id turpis eget placerat. Vivamus rutrum consectetur diam et pharetra. Ut pulvinar leo in malesuada vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur suscipit lobortis felis, ut imperdiet ante vehicula at. Sed sed tristique augue. Sed tempor massa nibh, vitae dictum nisi hendrerit vitae. Duis quis aliquam arcu. Vivamus euismod ac enim at feugiat. Sed sed leo nibh. Integer suscipit magna sit amet lectus pharetra, eget dictum odio porta. Suspendisse consequat ante a pellentesque mattis. Suspendisse placerat justo in orci facilisis, et faucibus neque egestas. Nullam eu ante quis dui facilisis hendrerit. Phasellus in risus id sapien faucibus pharetra. Ut interdum vitae erat ac blandit.            
+    </h1>
+    <input type="button" id="read-more-button" onclick="readMoreText();"></input>
+    <script>
+        //var textHeight = document.getElementById("read-text").clientHeight;
+
+        function readMoreText() {
+            var textHeight = document.getElementById("read-text").offsetHeight;
+            if (textHeight > 190) {
+                document.getElementById("read-text").style.height = "190px";
+                document.getElementById("read-text").style.overflow = "hidden";
+                document.getElementById("read-more-button").value = "read more..";
+            }
+            if (textHeight === 190) {
+                document.getElementById("read-text").style.height = "100%";
+                document.getElementById("read-more-button").value = "read less..";
+            }
+        }
+        readMoreText();
+    </script>   
+</body>
+</html>
