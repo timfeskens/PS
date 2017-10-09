@@ -20,49 +20,45 @@
 <body>
     <h2 id="timer">-- : --</h2>
     <script type="text/javascript">
-    var minutes = 1;
-    var seconds = 10;
+        var minutes = 1;
+        var seconds = 60;
 
-    function addZeroToSeconds (intervalTime) {
-        setInterval (function(){
-            if (seconds < 10 && seconds != 0) {
-                seconds = "0" + seconds;
-            }
-        }, intervalTime);
-    }
+        function addZeroToSeconds () {
+            setInterval (function(){
+                if (seconds < 10 && seconds != 0) {
+                    seconds = "0" + seconds;
+                }
+            }, 1000);
+        }
 
-    function addZeroToMinutes() {
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-    }
+        function addZeroToMinutes() {
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+        }
 
-    
+        function countDown() {
+            setInterval (function(){
+                document.getElementById("timer").innerHTML = minutes + " : " + seconds;
+                if (seconds >= 0) {
+                    seconds--;  
+                }
 
-    function countDown() {
-        setInterval (function(){
-            document.getElementById("timer").innerHTML = minutes + " : " + seconds;
-            if (seconds > 0) {
-                seconds--;  
-            }
+                if (seconds < 0 && minutes > 0) {
+                    seconds = 59;
+                    minutes--;
+                }
 
-            if (seconds === 0 && minutes > 0) {
-                seconds = 60;
-                minutes--;
-            }
-
-            if (minutes === 0 & seconds < 10) {
-                document.body.style.backgroundColor = "#FF0000";
-                document.getElementById("timer").style.color = "#FFFFFF";
-                document.getElementById("timer").style.fontSize = "10em";
-            }
-
-        }, 1000);
-        addZeroToSeconds(1000);
-        addZeroToMinutes();
-    }
-    countDown();
-    
+                if (minutes === 0 & seconds < 10) {
+                    document.body.style.backgroundColor = "#FF0000";
+                    document.getElementById("timer").style.color = "#FFFFFF";
+                    document.getElementById("timer").style.fontSize = "10em";
+                }
+            }, 1000);
+            addZeroToSeconds();
+            addZeroToMinutes();
+        }
+        countDown();
     </script>
 </body>
 </html>
