@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown</title>
+    <style>
+        body {
+            display: flex;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="timer">-- : --</h2>
+    <script type="text/javascript">
+    var minutes = 1;
+    var seconds = 10;
+
+    function addZeroToSeconds (intervalTime) {
+        setInterval (function(){
+            if (seconds < 10 && seconds != 0) {
+                seconds = "0" + seconds;
+            }
+        }, intervalTime);
+    }
+
+    function addZeroToMinutes() {
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+    }
+
+    
+
+    function countDown() {
+        setInterval (function(){
+            document.getElementById("timer").innerHTML = minutes + " : " + seconds;
+            if (seconds > 0) {
+                seconds--;  
+            }
+
+            if (seconds === 0 && minutes > 0) {
+                seconds = 60;
+                minutes--;
+            }
+
+            if (minutes === 0 & seconds < 10) {
+                document.body.style.backgroundColor = "#FF0000";
+                document.getElementById("timer").style.color = "#FFFFFF";
+                document.getElementById("timer").style.fontSize = "10em";
+            }
+
+        }, 1000);
+        addZeroToSeconds(1000);
+        addZeroToMinutes();
+    }
+    countDown();
+    
+    </script>
+</body>
+</html>
