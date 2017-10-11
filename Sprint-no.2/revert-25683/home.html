@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>25683</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+
+        #number-value {
+            font-size: 5em;
+        }
+
+        /* too lazy to use sass so no BEM for me :( */
+        #number-value--reversed {
+            font-size: 5em;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="number-value">25683</h2>
+    <button onclick="clickToReverse()">Click to reverse !</button>
+    <h2 id="number-value--reversed"></h2>
+    <script type="text/javascript">
+            var stringtoreverse = document.getElementById("number-value").innerHTML;
+            var numbertoreverse = parseInt(stringtoreverse) + "";
+
+            function reverseNumber()
+            {
+                numbertoreverse += "";
+                return numbertoreverse.split("").reverse().join("");
+            }
+            function clickToReverse() {
+                document.getElementById("number-value--reversed").style.transition = "all 2s";
+                document.getElementById("number-value--reversed").style.opacity = 1;
+                document.getElementById("number-value--reversed").innerHTML = reverseNumber();
+            }
+    </script>
+</body>
+</html>
