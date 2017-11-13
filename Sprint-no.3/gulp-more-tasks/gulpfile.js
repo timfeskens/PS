@@ -18,6 +18,6 @@ gulp.task('uglify', function() {
     gulp.src('scripts/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('assets'))
-  });
+});
 
   gulp.task('default', ['uglify', 'sass']);
