@@ -40,10 +40,10 @@
         function countDown() {
             setInterval (function(){
                 document.getElementById("timer").innerHTML = minutes + " : " + seconds;
-                if (seconds === 0 && minutes === 0) {
+                if (seconds !== 0 || minutes !== 0) {
+                    seconds--;
                 }
                 else {
-                  seconds--;
                 }
                 
                 if (seconds < 0 && minutes > 0) {
