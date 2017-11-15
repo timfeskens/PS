@@ -20,4 +20,4 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('assets'))
 });
 
-  gulp.task('default', ['uglify', 'sass']);
+gulp.task('default', ['uglify', 'sass']);

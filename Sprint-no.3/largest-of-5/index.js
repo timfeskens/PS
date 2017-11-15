@@ -1,8 +1,10 @@
+'use strict';
+
 function makeRandomNumbers() {
     // make the array
-    var numberarrray = [];
+    let numberarrray = [];
     //fill the array until there are 5 numbers in it
-    for (i = 0; i <5; i++) {
+    for (let i = 0; i <5; i++) {
       // create a random number under 1
       var randomnumber = Math.random();
       // multiplies the number and keeps it between 1 and 10
