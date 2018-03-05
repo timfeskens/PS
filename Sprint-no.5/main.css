@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: black; */
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:focus {
+    color: black;
+}
+
+.block {
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    background-color: cornsilk;
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding-bottom: 25px;
+}
+
+.block__title {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+.block__info-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 750px;
+}
+
+.block__info--titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    width: 97%;
+}
+
+.block__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.block__data {
+    align-content: center;
+    width: 100px;
+    padding: 0 10px;
+}
+
+.block__data--title {
+    font-weight: 700;
+}
+
+hr {
+    width: 70%;
+    margin: 20px;
+}
+
+.block__form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.block__input-title {
+    width: 160px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+.block__input-holder--title {
+    display: flex;
+    flex-direction: row;
+}
+
+.block__input-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.block__input-holder--small {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+select {
+    width: 130px;
+    margin: 0 45px;
+}
+
+.block__input-button {
+    margin: 5px auto;
+    width: 200px;
+}
